@@ -20,7 +20,7 @@ Application screenshot:
 Application final result:
 ![finalResult](images/finalResult.jpg)
 
-Deployed application link:
+Deployed application link: https://antonioalgaba.github.io/Password-Generator/
 
 ## Credits
 
