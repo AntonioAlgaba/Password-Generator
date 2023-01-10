@@ -97,7 +97,9 @@ var lowerCase;
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-  pwdLength = parseInt(prompt("Length of password"))
+  pwdLength = parseInt(prompt("Length of password"));
+  if (isNaN(pwdLength) !== false) {
+    alert("Plese enter only number");
   if(pwdLength < 10 || pwdLength > 64){
     alert("Password between 10 and 64")
   } else {
