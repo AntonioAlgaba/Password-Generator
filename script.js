@@ -98,10 +98,10 @@ var lowerCase;
 // Function to prompt user for password options
 function getPasswordOptions() {
   pwdLength = parseInt(prompt("Length of password"));
-  if (isNaN(pwdLength) !== false) {
-    alert("Plese enter only number");
-  if(pwdLength < 10 || pwdLength > 64){
-    alert("Password between 10 and 64")
+  if (Number.isNaN(pwdLength)) { // confirm(), refer to week 6, 01, activities 07
+    alert("Please enter only number");
+  } else if(pwdLength < 10 || pwdLength > 64){
+    alert("Password between 10 and 64");
   } else {
      lowerCase = confirm('Lower case?');
      upperCase = confirm('Upper case?');
@@ -121,8 +121,8 @@ function getPasswordOptions() {
     };
     return passwordOptions;  
     }
-   
-}
+  }
+
 
 //console.log(getPasswordOptions());
 // Function for getting a random element from an array
@@ -140,7 +140,7 @@ function generatePassword() {
    var result = [];
    var possibleChars = [];
    var guaranteedChars = [];
- 
+   
    if(options.lowerCase)
    {
     possibleChars = possibleChars.concat(lowerCasedCharacters);
@@ -169,7 +169,7 @@ function generatePassword() {
    }
    for (let i = 0; i < guaranteedChars.length; i++) {
     result[i] = guaranteedChars[i];
-}
+   }
 return result.join("");
 }
 
